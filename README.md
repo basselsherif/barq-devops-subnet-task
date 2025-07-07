@@ -79,7 +79,7 @@ pip3 install pandas matplotlib openpyxl
 
 ![Image Alt](https://github.com/basselsherif/barq-devops-subnet-task/blob/master/images/Screenshot%20(752).png?raw=true)
 
-![Screenshot (753)](https://github.com/user-attachments/assets/7c7407c9-4494-40b1-8760-1f53c18cc77f)
+![Image Alt](https://github.com/basselsherif/barq-devops-subnet-task/blob/master/images/Screenshot%20(753).png?raw=true)
 
 
 ---
@@ -99,7 +99,7 @@ pip3 install pandas matplotlib openpyxl
 
 2. **Create DockerFile**
 
-    ![Screenshot (757)](https://github.com/user-attachments/assets/53b433d1-60c9-4b4b-aac4-217bf46c6cb0)
+    ![Image Alt](https://github.com/basselsherif/barq-devops-subnet-task/blob/master/images/Screenshot%20(757).png?raw=true)
 
    **Note:** 
 
@@ -116,7 +116,7 @@ pip3 install pandas matplotlib openpyxl
     ```bash
     docker build -t subnet-analyzer-img .
     ```
-    ![Screenshot (758)](https://github.com/user-attachments/assets/35218327-23fb-4e78-8993-fcc2e846de2a)
+    ![Image Alt](https://github.com/basselsherif/barq-devops-subnet-task/blob/master/images/Screenshot%20(758).png?raw=true)
 
 4. **Run Docker Container**
 
@@ -126,19 +126,19 @@ pip3 install pandas matplotlib openpyxl
     docker container run -v "$PWD":/task subnet-analyzer-img
     ```
     
-    ![Screenshot (759)](https://github.com/user-attachments/assets/2b21d6a0-ab50-46f9-b659-305ab6fb96d2)
+    ![Image Alt](https://github.com/basselsherif/barq-devops-subnet-task/blob/master/images/Screenshot%20(759).png?raw=true)
 
 4. **Check Output**
 
     After execution, `subnet_report.csv` and `network_plot.png` will appear in your current directory.
 
-    ![Screenshot (760)](https://github.com/user-attachments/assets/be385fe5-6dd9-48f6-b440-f02a48bf22b3)
+    ![Image Alt](https://github.com/basselsherif/barq-devops-subnet-task/blob/master/images/Screenshot%20(760).png?raw=true)
 
-    ![Screenshot (761)](https://github.com/user-attachments/assets/0fd19213-4168-4b4e-bfe7-d42dceefe85f)
+    ![Image Alt](https://github.com/basselsherif/barq-devops-subnet-task/blob/master/images/Screenshot%20(761).png?raw=true)
 
 5. **Container that was running**
 
-    ![Screenshot (762)](https://github.com/user-attachments/assets/44e9ff14-0dab-4f10-9f06-61df27e37dbc)
+    ![Image Alt](https://github.com/basselsherif/barq-devops-subnet-task/blob/master/images/Screenshot%20(762).png?raw=true)
 
 
 
