@@ -1,8 +1,5 @@
 # Network Subnet Analysis Report
 
-## Executive Summary
-
-This report analyzes 25 IP addresses across various subnets to identify capacity utilization, potential overlaps, and optimization opportunities. The analysis reveals significant variations in subnet sizes and potential for IP address space optimization.
 
 ## Data Overview
 
@@ -29,7 +26,7 @@ The following /22 subnets have the maximum host capacity:
 
 **Answer**: No overlapping subnets were detected.
 
-All subnets in the analysis are properly configured with distinct network address ranges. Each subnet maintains its own isolated address space without any conflicts or overlaps. This indicates good network planning and CIDR block allocation.
+All subnets in the analysis are configured with distinct network address ranges. Each subnet maintains its own isolated address space without any conflicts or overlaps.
 
 ## Question 3: What is the smallest and largest subnet in terms of address space?
 
@@ -43,10 +40,6 @@ All subnets in the analysis are properly configured with distinct network addres
 - **Count**: 14 subnets
 - **Address Space**: 256 total addresses per subnet (including network and broadcast)
 
-**Medium Subnets**:
-- **Size**: /23 subnets with 510 usable hosts each
-- **Count**: 3 subnets
-- **Address Space**: 512 total addresses per subnet
 
 ## Question 4: Suggest a Subnetting Strategy that could reduce wasted IPs in this network.
 
@@ -60,7 +53,7 @@ The network shows a binary approach to subnetting with only three subnet sizes:
 ### Optimization Recommendations
 
 #### 1. **Implement Variable Length Subnet Masking (VLSM)**
-Instead of using only /22, /23, and /24 subnets, implement a more granular approach:
+Instead of using only /22, /23, and /24 subnets:
 
 - **Small Networks (1-30 hosts)**: Use /27 subnets (30 hosts)
 - **Medium Networks (31-62 hosts)**: Use /26 subnets (62 hosts)
@@ -68,42 +61,8 @@ Instead of using only /22, /23, and /24 subnets, implement a more granular appro
 - **Very Large Networks (127-254 hosts)**: Use /24 subnets (254 hosts)
 - **Enterprise Networks (255+ hosts)**: Use /23 or /22 only when justified
 
-#### 2. **Conduct Host Utilization Assessment**
-- Audit actual host count per subnet
-- Monitor growth trends over 6-12 months
-- Right-size subnets based on actual usage plus 20-30% growth buffer
-
-#### 3. **Consolidation Strategy**
-- **Merge underutilized /22 subnets**: If multiple /22 subnets have <200 active hosts, consider consolidating
-- **Split oversized /24 subnets**: If /24 subnets consistently use <100 hosts, consider /25 or /26
-
-#### 4. **Address Space Hierarchy**
-Implement a structured approach by network class:
-
-**Class A (10.x.x.x) - Internal Networks**:
-- Reserve /22 for data centers and server farms
-- Use /24-/25 for department networks
-- Use /26-/27 for small branch offices
-
-**Class B (172.16.x.x) - DMZ/External Services**:
-- Use /24 for web servers and external services
-- Use /26-/27 for specific service clusters
-
-**Class C (192.168.x.x) - End-User Networks**:
-- Use /25-/26 for office networks
-- Use /27-/28 for small remote locations
-
-#### 5. **Potential Savings**
-With proper rightsizing, estimated IP address waste reduction:
-- **Conservative estimate**: 30-40% reduction in allocated but unused addresses
-- **Aggressive optimization**: 50-60% reduction with proper VLSM implementation
-
-### Implementation Priority
-1. **High Priority**: Audit current utilization rates
-2. **Medium Priority**: Implement VLSM for new subnet assignments
-3. **Low Priority**: Gradually migrate existing oversized subnets during maintenance windows
 
 ## Conclusion
 
-The current network demonstrates good segregation practices with no overlapping subnets. However, the limited subnet size options (only /22, /23, /24) suggest significant potential for optimization. Implementing VLSM and conducting utilization audits could substantially reduce IP address waste while maintaining network performance and future growth capacity.
+The current network shows good practices with no overlapping subnets. However, the limited subnet size options (only /22, /23, /24) suggest significant potential for optimization. Implementing VLSM reduce IP address waste while maintaining network performance and future growth capacity.
 
