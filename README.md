@@ -73,7 +73,7 @@ pip3 install pandas matplotlib openpyxl
 
 **Status Before running**
 
-![Screenshot (751)](https://github.com/user-attachments/assets/ad76df47-10b1-45be-9518-447f175fe127)
+![Image Alt](https://github.com/basselsherif/barq-devops-subnet-task/blob/master/images/Screenshot%20(751).png?raw=true)
 
 **Output after running**
 
