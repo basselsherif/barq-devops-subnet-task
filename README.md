@@ -130,7 +130,7 @@ pip3 install pandas matplotlib openpyxl
 
 4. **Check Output**
 
-    After execution, `subnet_report.csv` and `network_plot.png` will appear in your current directory.
+    After execution, `subnet_report.csv` and `network_plot.png` will appear in my current directory.
 
     ![Image Alt](https://github.com/basselsherif/barq-devops-subnet-task/blob/master/images/Screenshot%20(760).png?raw=true)
 
